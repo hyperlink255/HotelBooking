@@ -17,6 +17,11 @@ import clerkWebhooks from "./controllers/clerkWebhooks.js"
  // end Pointes
  app.use('/api/clerk',clerkWebhooks)
 
+ app.get('/', (req, res) => {
+  res.send('Hello from Express on Vercel!');
+});
+
+
  const PORT = process.env.PORT || 3000
 
  app.listen(PORT, () => {
